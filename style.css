@@ -48,7 +48,7 @@ body {
 
 .watch-band {
     border: 1px solid #fff ;
-    background: rgb(37, 36, 36);
+    background: rgb(43, 42, 42);
     height: 350px;
     width: 100%;
 }
@@ -84,6 +84,7 @@ body {
 
 .calculator-display h1 {
     margin: 0;
+    height: 55px;
     padding: 25px;
     font-size: 45px;
     font-family: 'Calculator', sans-serif;
