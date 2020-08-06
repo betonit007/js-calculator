@@ -1,9 +1,9 @@
 @font-face {
-
-    font-family: 'Calculator' ;
+    font-family: 'Calculator';
     src: url('/utils/Calculator.ttf') format('truetype');
- 
- }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
 html {
     box-sizing: border-box;
@@ -15,19 +15,66 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #bbd2c5, #536976); 
+    background: linear-gradient(to right, #bbd2c5, #536976);
 }
+
+.watch-container {
+    width: 400px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    letter-spacing: 5px;
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.watch-face {
+    background: rgb(37, 37, 37);
+    border-radius: 12px;
+    padding: 10px 15px 40px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.watch-band {
+    border: 1px solid #fff ;
+    background: rgb(37, 36, 36);
+    height: 350px;
+    width: 100%;
+}
+
+.watch-band hr {
+    margin: 50px 0;
+}
+
+.watch-band.upper {
+    clip-path: polygon(15% 0%, 85% 0%, 95% 95%, 100% 100%, 0 100%, 5% 95%);
+}
+
+.watch-band.lower {
+    clip-path: polygon(0 0, 100% 0, 95% 5%, 85% 100%, 15% 100%, 5% 5%);}
 
 .calculator {
     background: whitesmoke;
-    width: 400px;
+    width: 98%;
     border-radius: 12px;
-    box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6); /*V offset, H offset, spread, blur, color  */
+    box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.6);
+    /*V offset, H offset, spread, blur, color  */
 }
 
 .calculator-display {
-    background: black;
-    color: white;
+    background: rgba(201, 194, 194, 0.849);
+    color: black;
     margin: 0;
     display: flex;
     align-items: center;
@@ -45,36 +92,71 @@ body {
 }
 
 /* W3 schools scrollbar */
+
 /* width */
+
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
     background: #f1f1f1;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
     background: #888;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
+}
 
-  /* Buttons */
-  .calculator-buttons {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      padding: 10px;
-  }
+/* Buttons */
 
-  .equal-sign {
-      grid-column: -2;
-      grid-row: 2 / span 4
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
 
-  }
+button {
+    background: black;
+    color: #fff;
+    font-weight: 100;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.operator {
+    background: rgb(15, 15, 15);
+}
+
+.equal-sign {
+    grid-column: -2;
+    grid-row: 2 / span 4
+}
+
+button:hover {
+    filter: brightness(150%)
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active {
+    transform: scale(.96);
+}
+
+@media screen and (max-width: 400px) {
+    .watch {
+        width: 95%;
+    }
+}
