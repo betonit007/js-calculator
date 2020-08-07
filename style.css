@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Calculator';
-    src: url('/utils/Calculator.ttf') format('truetype');
+    src: url('./utils/Calculator.ttf') format('truetype');
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
